@@ -1,0 +1,15 @@
+.body1{
+
+    height: 1000px;
+    background-color: #0a0a0f;
+    background:linear-gradient(180deg,#0a0a0f,#33334d);
+}
+
+h1{
+
+color: white;
+}
+
+tr{
+color: white;
+}

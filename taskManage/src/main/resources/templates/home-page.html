@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Page Task Management</title>
+</head>
+<body>
+
+  <h1>Welcome!</h1>
+
+
+  <form th:action="@{/submitForm}" th:object="${task}" method="POST">
+
+
+    <label>Task name: </label>
+    <input type="text" th:field="*{taskName}">
+    <label>Description</label>
+    <input type="text" th:field="*{description}">
+    <label>Deadline</label>
+    <input type="datetime-local" th:field="*{deadline}" id="dateTime">
+
+    <input type="submit" value=" Submit">
+
+  </form>
+</body>
+</html>

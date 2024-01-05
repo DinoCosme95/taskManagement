@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Task List</title>
+<<<<<<< HEAD
+</head>
+<body>
+=======
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="body1">
+>>>>>>> 76f4875 (Initial commit)
+    <h1>Task List</h1>
+
+    <table>
+        <head>
+            <tr>
+                <th>ID</th>
+                <th>Task Name</th>
+                <th>Description</th>
+                <th>Deadline</th>
+                <th>Created Time</th>
+            </tr>
+        </head>
+        <body>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 76f4875 (Initial commit)
+            <tr th:each="task : ${tasks}">
+                <td th:text="${task.id}"></td>
+                <td th:text="${task.taskName}"></td>
+                <td th:text="${task.description}"></td>
+                <td th:text="${task.deadline}"></td>
+                <td th:text="${task.dateCreated}"></td>
+            </tr>
+        </body>
+    </table>
+</body>
+</html>
