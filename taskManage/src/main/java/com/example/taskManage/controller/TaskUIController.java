@@ -3,12 +3,6 @@ package com.example.taskManage.controller;
 
 import com.example.taskManage.model.Task;
 import com.example.taskManage.service.TaskService;
-<<<<<<< HEAD
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-=======
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,8 +11,11 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
->>>>>>> 76f4875 (Initial commit)
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 @Controller
 @RequestMapping("/tasks")
@@ -30,19 +27,13 @@ public class TaskUIController {
     private TaskService taskService;
 
     @GetMapping("/list")
-<<<<<<< HEAD
-    public String showTaskList(Model model){
-=======
     public String showTaskList(HttpServletRequest request,Model model){
->>>>>>> 76f4875 (Initial commit)
 
         Iterable<Task> tasks = taskService.fetchTaskList();
-        model.addAttribute("tasks", tasks);
+        model.addAttribute("task", tasks);
         return "taskList";
 
     }
-<<<<<<< HEAD
-=======
     @GetMapping("/createTask")
     public String newTask(Model theModel){
 
@@ -59,10 +50,12 @@ public class TaskUIController {
         return "redirect:/success";
     }
 
+
+
+
     @GetMapping("/homepage")
     public String homepage(){
 
         return "home-page";
     }
->>>>>>> 76f4875 (Initial commit)
 }
