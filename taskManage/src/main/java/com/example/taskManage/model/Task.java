@@ -9,7 +9,6 @@ import java.time.format.DateTimeFormatter;
 
 
 @Entity
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -36,13 +35,6 @@ public class Task {
     private String formattedCreatedTime;
 
 
-
-    public String getFormattedCreatedTime() {
-        if (dateCreated != null) {
-            return dateCreated.format(DateTimeFormatter.ofPattern("HH:mm:ss"));
-        }
-        return null;
-    }
 
 
 
